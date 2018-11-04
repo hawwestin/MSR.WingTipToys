@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Adv\adv.xml" />
     <Content Include="Adv\Adv1.png" />
     <Content Include="Adv\Adv2.png" />
     <Content Include="Ankieta.aspx" />

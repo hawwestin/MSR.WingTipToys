@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Ankieta.aspx.cs" Inherits="zadanie3.Ankieta" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/Adv/adv.xml" />
+    <br />
     <asp:MultiView ID="mainMultiView" runat="server">
         <asp:View ID="ankietaGlowna" runat="server">
             imię:<br />
