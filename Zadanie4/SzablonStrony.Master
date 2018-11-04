@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SzablonStrony.master.cs" Inherits="Zadanie4.SzablonStrony" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="~/Style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="Strona">
+            <div id="Naglowek">
+                <asp:Image ImageUrl="~/Images/AWlogo.jpg" runat="server" />
+                <div id="Menu">Menu
+                    <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/Ankieta?view=nowy">Ankieta dla nowych klientów</a></li>
+                        <li><a runat="server" href="~/Ankieta?view=wycieczki">Ankieta dla posiadaczy</a></li>                        
+                    </ul>
+                </div>
+
+
+                </div>
+                <div id="ObszarLogowania">Zaloguj</div>
+            </div>
+            <div id="Tresc">
+                <div id="PierwszyObszarBoczny">PierwszyObszarBoczny</div>
+                <div id="DrugiObszarBoczny">DrugiObszarBoczny</div>
+                <div id="ObszarRoboczy">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </form>
+</body>
+</html>
