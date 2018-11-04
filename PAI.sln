@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPage1", "WebPage1\WebPag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zad2", "Zad2\Zad2.csproj", "{F61C7DE8-C1CC-4CB6-B2E7-45CDE38B0D9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zadanie3", "zadanie3\zadanie3.csproj", "{6542FA94-24D9-4FE7-B242-D27EA6C3ACF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureBikeShop", "zadanie3\AdventureBikeShop.csproj", "{6542FA94-24D9-4FE7-B242-D27EA6C3ACF7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadanie4Bad", "Zadanie4\Zadanie4Bad.csproj", "{BCA65192-EA0C-46EB-AB38-EC5693ECAEAA}"
 EndProject

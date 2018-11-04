@@ -1,0 +1,34 @@
+﻿body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8px;
+    color: #000033;
+}
+
+#PierwszyObszarBoczny {
+    float: left;    
+    width: 200px;
+    height: 300px;
+}
+
+#DrugiObszarBoczny {
+    float: right;    
+    width: 200px;
+    height: 300px;
+}
+
+#Menu {
+    background-color: #55bbff;
+    font-size: 7.5pt;
+}
+
+#ObszarRoboczy {
+    background-color: #EEE;
+    padding: 50px 20px 50px 20px;
+    margin: 0 200px 0 200px;
+}
+
+#ObszarLogowania {
+    text-align: right;
+    background-color: #c3dbea;
+    padding: 5px 10px 5px 10px;
+}

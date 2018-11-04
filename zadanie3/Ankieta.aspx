@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Ankieta.aspx.cs" Inherits="zadanie3.Ankieta" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SzablonStrony.Master" AutoEventWireup="true" CodeBehind="Ankieta.aspx.cs" Inherits="zadanie3.Ankieta" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/Adv/adv.xml" />
     <br />
     <asp:MultiView ID="mainMultiView" runat="server">
@@ -147,7 +147,7 @@
             </asp:CheckBoxList>
             <br />
 
-            <asp:Button ID="wyswietlButton" Text="Wyświetl" runat="server" OnClick="wyswietlButton_Click" />
+            <asp:Button ID="WyswietlButton" Text="Wyświetl" runat="server" OnClick="WyswietlButton_Click" />
         </asp:View>
         <asp:View ID="podsumowanie" runat="server">
             Dziękujemy za wypełnienie ankiety <a href="Default.aspx">powrót</a>.

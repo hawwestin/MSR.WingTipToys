@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace zadanie3
 {
-    public partial class Ankieta : System.Web.UI.Page
+    public partial class Ankieta : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,14 +24,14 @@ namespace zadanie3
                 }
                 else
                 {
-                    Response.Redirect("~/Default.aspx");
+                    Response.Redirect("~/");
                 }
             }
         }
 
-        protected void wyswietlButton_Click(object sender, EventArgs e)
+        protected void WyswietlButton_Click(object sender, EventArgs e)
         {
-            if (!IsValid)
+            if (IsValid)
             {
                 mainMultiView.SetActiveView(podsumowanie);
             }

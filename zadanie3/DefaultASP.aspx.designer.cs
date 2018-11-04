@@ -10,6 +10,6 @@
 namespace zadanie3 {
     
     
-    public partial class Default {
+    public partial class DefaultASP {
     }
 }

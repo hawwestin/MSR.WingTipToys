@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace zadanie3
 {
-    public partial class Default : Page
+    public partial class SzablonStrony : MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
