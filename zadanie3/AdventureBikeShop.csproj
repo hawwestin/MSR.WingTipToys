@@ -105,12 +105,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
+    <Content Include="Sites\About.aspx" />
     <Content Include="Adv\adv.xml" />
     <Content Include="Adv\Adv1.png" />
     <Content Include="Adv\Adv2.png" />
-    <Content Include="Ankieta.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="Sites\Ankieta.aspx" />
+    <Content Include="Sites\Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -132,6 +132,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\AWlogo.jpg" />
+    <Content Include="Sites\Informacje.aspx" />
+    <Content Include="Sites\Produkty.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -161,33 +163,36 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Sites\Szukaj.aspx" />
+    <Content Include="Sites\Uwagi.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ankieta.aspx.cs">
+    <Compile Include="Sites\Ankieta.aspx.cs">
       <DependentUpon>Ankieta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Ankieta.aspx.designer.cs">
+    <Compile Include="Sites\Ankieta.aspx.designer.cs">
       <DependentUpon>Ankieta.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
+    <Compile Include="Sites\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
+    <Compile Include="Sites\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
+    <Compile Include="Sites\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
+    <Compile Include="Sites\Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="DefaultASP.aspx.cs">
@@ -206,6 +211,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Sites\Informacje.aspx.cs">
+      <DependentUpon>Informacje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\Informacje.aspx.designer.cs">
+      <DependentUpon>Informacje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sites\Produkty.aspx.cs">
+      <DependentUpon>Produkty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\Produkty.aspx.designer.cs">
+      <DependentUpon>Produkty.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -228,6 +247,20 @@
     </Compile>
     <Compile Include="SzablonStrony.Master.designer.cs">
       <DependentUpon>SzablonStrony.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Sites\Szukaj.aspx.cs">
+      <DependentUpon>Szukaj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\Szukaj.aspx.designer.cs">
+      <DependentUpon>Szukaj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sites\Uwagi.aspx.cs">
+      <DependentUpon>Uwagi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\Uwagi.aspx.designer.cs">
+      <DependentUpon>Uwagi.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

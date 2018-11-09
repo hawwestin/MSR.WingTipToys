@@ -5,13 +5,13 @@
 }
 
 #PierwszyObszarBoczny {
-    float: left;    
+    float: left;
     width: 200px;
     height: 300px;
 }
 
 #DrugiObszarBoczny {
-    float: right;    
+    float: right;
     width: 200px;
     height: 300px;
 }
@@ -31,4 +31,26 @@
     text-align: right;
     background-color: #c3dbea;
     padding: 5px 10px 5px 10px;
+}
+
+.ElementyMenuNadrzednego {
+    color: #000033;
+    font-weight: bold;
+    padding: 3px 10px;
+}
+
+.ElementyMenuRozwijanego {
+    background: #F5F5F5;
+    color: #000033;
+    padding: 3px 10px;
+}
+
+.ElementyMenuNadrzednego:hover {
+    background: #000033;
+    color: white;
+}
+
+.ElementyMenuRozwijanego:hover {
+    background: #000033;
+    color: white;
 }

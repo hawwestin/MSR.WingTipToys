@@ -15,7 +15,7 @@
     </asp:PlaceHolder>
 
     <webopt:BundleReference runat="server" Path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />    
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -25,13 +25,9 @@
                 <div id="Menu">
                     Menu
                     <div>
-                        <ul>
-                            <li><a runat="server" href="~/">Home</a></li>
-                            <li><a runat="server" href="~/Ankieta?view=nowy">Ankieta dla nowych klientów</a></li>
-                            <li><a runat="server" href="~/Ankieta?view=wycieczki">Ankieta dla posiadaczy</a></li>
-                        </ul>
+                        <asp:SiteMapDataSource ID="MapaSerwisu" runat="server" ShowStartingNode="False" />
+                        <asp:Menu ID="MenuGlowne" runat="server" DataSourceID="MapaSerwisu" Orientation="Horizontal" DynamicMenuItemStyle-CssClass="ElementyMenuRozwijanego" StaticMenuItemStyle-CssClass="ElementyMenuNadrzednego"></asp:Menu>
                     </div>
-
 
                 </div>
                 <div id="ObszarLogowania">Zaloguj</div>
