@@ -1,0 +1,56 @@
+﻿body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8px;
+    color: #000033;
+}
+
+#PierwszyObszarBoczny {
+    float: left;
+    width: 200px;
+    height: 300px;
+}
+
+#DrugiObszarBoczny {
+    float: right;
+    width: 200px;
+    height: 300px;
+}
+
+#Menu {
+    background-color: #d80f0f;
+    font-size: 7.5pt;
+}
+
+#ObszarRoboczy {
+    background-color: #870e0e;
+    padding: 50px 20px 50px 20px;
+    margin: 0 200px 0 200px;
+}
+
+#ObszarLogowania {
+    text-align: right;
+    background-color:#870e0e;
+    padding: 5px 10px 5px 10px;
+}
+
+.ElementyMenuNadrzednego {
+    color: #000033;
+    font-weight: bold;
+    padding: 3px 10px;
+}
+
+.ElementyMenuRozwijanego {
+    background: #F5F5F5;
+    color: #000033;
+    padding: 3px 10px;
+}
+
+.ElementyMenuNadrzednego:hover {
+    background: #000033;
+    color: white;
+}
+
+.ElementyMenuRozwijanego:hover {
+    background: #000033;
+    color: white;
+}

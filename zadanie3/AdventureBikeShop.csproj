@@ -105,6 +105,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\CzerwonaSkorka\Style.css" />
+    <Content Include="App_Themes\NiebieskaSkorka\Style.css" />
     <Content Include="Sites\About.aspx" />
     <Content Include="Adv\adv.xml" />
     <Content Include="Adv\Adv1.png" />
@@ -130,6 +132,8 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="App_Themes\NiebieskaSkorka\NiebieskaSkorka.skin" />
+    <Content Include="App_Themes\CzerwonaSkorka\CzerwonaSkorka.skin" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\AWlogo.jpg" />
     <Content Include="Sites\Informacje.aspx" />
