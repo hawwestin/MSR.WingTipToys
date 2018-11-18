@@ -7,7 +7,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 
-namespace zadanie3
+namespace AdventureBikeShop
 {
     public class Global : HttpApplication
     {

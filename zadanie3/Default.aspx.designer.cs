@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace zadanie3 {
+namespace AdventureBikeShop {
     
     
     public partial class Default {

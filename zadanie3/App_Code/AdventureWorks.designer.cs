@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace zadanie3.App_Code
+namespace AdventureBikeShop.App_Code
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;

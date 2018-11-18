@@ -7,18 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AdventureBikeShop {
+namespace AdventureBikeShop.Sites {
     
     
-    public partial class Szukaj {
+    public partial class WynikiWyszukiwania {
         
         /// <summary>
-        /// Szukaj1 control.
+        /// WynikiWyszukiwaniaGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AdventureBikeShop.Kontrolki.Szukaj Szukaj1;
+        protected global::System.Web.UI.WebControls.GridView WynikiWyszukiwaniaGridView;
+        
+        /// <summary>
+        /// Szukaj control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AdventureBikeShop.Kontrolki.Szukaj Szukaj;
     }
 }

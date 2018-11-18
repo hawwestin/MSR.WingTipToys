@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace zadanie3
+namespace AdventureBikeShop
 {
     public partial class Contact : Page
     {

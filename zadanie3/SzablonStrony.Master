@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SzablonStrony.master.cs" Inherits="zadanie3.SzablonStrony" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SzablonStrony.master.cs" Inherits="AdventureBikeShop.SzablonStrony" %>
 
 <!DOCTYPE html>
 

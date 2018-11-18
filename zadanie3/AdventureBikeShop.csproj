@@ -12,8 +12,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>zadanie3</RootNamespace>
-    <AssemblyName>zadanie3</AssemblyName>
+    <RootNamespace>AdventureBikeShop</RootNamespace>
+    <AssemblyName>AdventureBikeShop</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -114,6 +114,7 @@
     </Content>
     <Content Include="App_Themes\CzerwonaSkorka\Style.css" />
     <Content Include="App_Themes\NiebieskaSkorka\Style.css" />
+    <Content Include="Kontrolki\Szukaj.ascx" />
     <Content Include="Sites\About.aspx" />
     <Content Include="Adv\adv.xml" />
     <Content Include="Adv\Adv1.png" />
@@ -144,7 +145,6 @@
     <Content Include="App_Code\AdventureWorks.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>AdventureWorks.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </Content>
     <None Include="App_Code\AdventureWorks.dbml.layout">
       <DependentUpon>AdventureWorks.dbml</DependentUpon>
@@ -184,6 +184,7 @@
     <Content Include="Site.Master" />
     <Content Include="Sites\Szukaj.aspx" />
     <Content Include="Sites\Uwagi.aspx" />
+    <Content Include="Sites\WynikiWyszukiwania.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -198,6 +199,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AdventureWorks.dbml</DependentUpon>
     </Content>
+    <Compile Include="Kontrolki\Szukaj.ascx.cs">
+      <DependentUpon>Szukaj.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontrolki\Szukaj.ascx.designer.cs">
+      <DependentUpon>Szukaj.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Sites\Ankieta.aspx.cs">
       <DependentUpon>Ankieta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -266,6 +274,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Sites\WynikiWyszukiwania.aspx.cs">
+      <DependentUpon>WynikiWyszukiwania.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\WynikiWyszukiwania.aspx.designer.cs">
+      <DependentUpon>WynikiWyszukiwania.aspx</DependentUpon>
     </Compile>
     <Compile Include="SzablonStrony.Master.cs">
       <DependentUpon>SzablonStrony.Master</DependentUpon>

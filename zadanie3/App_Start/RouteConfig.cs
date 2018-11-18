@@ -4,7 +4,7 @@ using System.Web;
 using System.Web.Routing;
 using Microsoft.AspNet.FriendlyUrls;
 
-namespace zadanie3
+namespace AdventureBikeShop
 {
     public static class RouteConfig
     {

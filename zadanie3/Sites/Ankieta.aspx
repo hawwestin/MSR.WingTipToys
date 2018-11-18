@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SzablonStrony.Master" AutoEventWireup="true" CodeBehind="Ankieta.aspx.cs" Inherits="zadanie3.Ankieta" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SzablonStrony.Master" AutoEventWireup="true" CodeBehind="Ankieta.aspx.cs" Inherits="AdventureBikeShop.Ankieta" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/Adv/adv.xml" />
