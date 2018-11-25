@@ -13,13 +13,13 @@ namespace AdventureBikeShop {
     public partial class Produkty {
         
         /// <summary>
-        /// KategorieLinqDataSource control.
+        /// KategorieEntityDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinqDataSource KategorieLinqDataSource;
+        protected global::System.Web.UI.WebControls.EntityDataSource KategorieEntityDataSource;
         
         /// <summary>
         /// KategorieListBox control.
@@ -31,13 +31,13 @@ namespace AdventureBikeShop {
         protected global::System.Web.UI.WebControls.ListBox KategorieListBox;
         
         /// <summary>
-        /// PodkategorieLinqDataSource control.
+        /// PodkategorieEntityDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinqDataSource PodkategorieLinqDataSource;
+        protected global::System.Web.UI.WebControls.EntityDataSource PodkategorieEntityDataSource;
         
         /// <summary>
         /// PodkategorieListBox control.
@@ -49,13 +49,13 @@ namespace AdventureBikeShop {
         protected global::System.Web.UI.WebControls.ListBox PodkategorieListBox;
         
         /// <summary>
-        /// ProduktyLinqDataSource control.
+        /// ProduktyEntityDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinqDataSource ProduktyLinqDataSource;
+        protected global::System.Web.UI.WebControls.EntityDataSource ProduktyEntityDataSource;
         
         /// <summary>
         /// GridView1 control.
