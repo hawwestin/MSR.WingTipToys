@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureBikeShop", "zadani
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadanie4Bad", "Zadanie4\Zadanie4Bad.csproj", "{BCA65192-EA0C-46EB-AB38-EC5693ECAEAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys", "WingtipToys\WingtipToys.csproj", "{D0ED6C16-4471-41A6-A794-23B302C72BA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{BCA65192-EA0C-46EB-AB38-EC5693ECAEAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCA65192-EA0C-46EB-AB38-EC5693ECAEAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCA65192-EA0C-46EB-AB38-EC5693ECAEAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0ED6C16-4471-41A6-A794-23B302C72BA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0ED6C16-4471-41A6-A794-23B302C72BA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0ED6C16-4471-41A6-A794-23B302C72BA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0ED6C16-4471-41A6-A794-23B302C72BA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

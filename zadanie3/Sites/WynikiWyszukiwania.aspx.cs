@@ -16,7 +16,9 @@ namespace AdventureBikeShop.Sites
             var nazwa = Request.QueryString["Nazwa"];
             if (nazwa != null)
             {
-                //AdventureBikeShop.AdventureWorksDataContext db = new AdventureBikeShop.AdventureWorksDataContext();
+                //https://docs.microsoft.com/pl-pl/aspnet/overview
+                //https://msdn.microsoft.com/tr-tr/library/bb907622(v=vs.100).aspx 
+                //AdventureBikeShop.App_code.AdventurekWorksDataContext db = new AdventureBikeShop.AdventureWorksDataContext();
 
             }
         }
