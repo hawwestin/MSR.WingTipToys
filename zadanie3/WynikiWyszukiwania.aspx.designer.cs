@@ -10,15 +10,15 @@
 namespace zadanie3 {
     
     
-    public partial class Szukaj {
+    public partial class WynikiWyszukiwania {
         
         /// <summary>
-        /// Szukaj1 control.
+        /// WynikiWyszukiwaniaGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::zadanie3.Kontrolki.Szukaj Szukaj1;
+        protected global::System.Web.UI.WebControls.GridView WynikiWyszukiwaniaGridView;
     }
 }
