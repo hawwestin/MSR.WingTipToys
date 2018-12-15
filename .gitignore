@@ -264,3 +264,6 @@ __pycache__/
 # hide config 
 *.config.*.json
 *.*.config
+
+#sync
+.sync/

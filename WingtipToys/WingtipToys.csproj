@@ -46,6 +46,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PayPal, Version=1.9.1.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PayPal.1.9.1\lib\net451\PayPal.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -242,7 +245,7 @@
     <Content Include="Account\Web.config" />
     <Content Include="Catalog\Images\Thumbs.db" />
     <Content Include="Catalog\Images\Thumbs\Thumbs.db" />
-    <Content Include="Checkout\Web.config" />
+    <None Include="Checkout\Web.config.tmp" />
     <Content Include="App_Start\client_id.config.json">
       <TransformOnBuild>true</TransformOnBuild>
     </Content>
@@ -473,6 +476,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logic\PayPalFunctions.cs" />
     <Compile Include="Logic\ShoppingCartActions.cs" />
     <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\Category.cs" />
@@ -582,8 +586,7 @@
        -->
   <Target Name="BeforeBuild">
     <!--<Copy SourceFiles="Web.config" DestinationFiles="Web.config.temp" Condition="Exists('Web.config')" />-->
-    <TransformXml Source="Web.config" Transform="Web.$(Configuration).config" Destination="Web.config"
-                  Condition="Exists('Web.$(Configuration).config')"/>
+    <TransformXml Source="Web.config" Transform="Web.$(Configuration).config" Destination="Web.config" Condition="Exists('Web.$(Configuration).config')" />
   </Target>
   <!--<Target Name="AfterBuild">
     <Copy SourceFiles="Web.config.temp" DestinationFiles="Web.config" Condition="Exists('Web.config.temp')" />

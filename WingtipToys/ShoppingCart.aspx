@@ -42,7 +42,54 @@
                 <asp:Button ID="UpdateBtn" runat="server" Text="Update" OnClick="UpdateBtn_Click" />
             </td>
             <td>
-                <!--Checkout Placeholder -->
+                <div id="paypal-button"></div>
+                <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+                <script>
+                    paypal.Button.render({
+                        // Configure environment
+                        env: 'sandbox',
+                        client: {
+                            sandbox: 'demo_sandbox_client_id',
+                            production: 'demo_production_client_id'
+                        },
+                        // Customize button (optional)
+                        locale: 'en_US',
+                        style: {
+                            size: 'small',
+                            color: 'gold',
+                            shape: 'pill',
+                        },
+
+                        // Enable Pay Now checkout flow (optional)
+                        commit: true,
+
+                        // Set up a payment
+                        payment: function (data, actions) {
+                            return actions.payment.create({
+                                transactions: [{
+                                    amount: {
+                                        total: '0.01',
+                                        currency: 'PLN'
+                                    }
+                                }]
+                            });
+                        },
+                        // Execute the payment
+                        onAuthorize: function (data, actions) {
+                            return actions.payment.execute().then(function () {
+                                // Show a confirmation message to the buyer
+                                window.alert('Thank you for your purchase!');
+                            });
+                        }
+                    }, '#paypal-button');
+
+                </script>
+
+                <asp:ImageButton ID="CheckoutImageBtn" runat="server" 
+                      ImageUrl="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" 
+                      Width="145" AlternateText="Check out with PayPal" 
+                      OnClick="CheckoutBtn_Click" 
+                      BackColor="Transparent" BorderWidth="0" />
             </td>
         </tr>
     </table>

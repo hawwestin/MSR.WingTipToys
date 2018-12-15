@@ -7,7 +7,7 @@ namespace WingtipToys.Models
 {
     public class Order
     {
-        public int OrderID { get; set; }
+        public int OrderId { get; set; }
         public DateTime OrderDate { get; set; }
         public string Username { get; set; }
 
