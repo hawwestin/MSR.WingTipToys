@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,14 +14,16 @@ namespace WingtipToys.Checkout
         {
             NVPAPICaller payPalCaller = new NVPAPICaller();
             string retMsg = "";
+            
             string token = "";
 
+            // should by set on ShoppingCart.aspx.cs on buy PP button
             if (Session["payment_amt"] != null)
             {
+
                 string amt = Session["payment_amt"].ToString();
 
-                bool ret = payPalCaller.ShortcutExpressCheckout(amt, ref token, ref retMsg);
-                if (ret)
+                if (payPalCaller.ShortcutExpressCheckout(amt, ref token, ref retMsg))
                 {
                     Session["token"] = token;
                     Response.Redirect(retMsg);

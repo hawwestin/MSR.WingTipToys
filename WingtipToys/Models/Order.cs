@@ -29,7 +29,7 @@ namespace WingtipToys.Models
         [StringLength(40)]
         public string City { get; set; }
 
-        [Required(ErrorMessage = "State is required")]
+        //[Required(ErrorMessage = "State is required")]
         [StringLength(40)]
         public string State { get; set; }
 

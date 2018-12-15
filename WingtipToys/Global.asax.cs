@@ -22,6 +22,9 @@ namespace WingtipToys
             // Initializa the product datbase.
             Database.SetInitializer(new ProductDatabaseInitializer());
 
+            System.Threading.Thread.CurrentThread.CurrentCulture =
+                new System.Globalization.CultureInfo("en-US", true);
+
         }
     }
 }

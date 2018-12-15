@@ -11,9 +11,17 @@ using WingtipToys;
 using WingtipToys.Models;
 using System.Collections.Generic;
 using System.Linq;
+using WingtipToys.Logic;
 
+/// <summary>
+/// NVP and SOAP API 
+/// https://developer.paypal.com/docs/classic/api/
+/// Important:
+///     This integration method is deprecated as of January 1, 2017.
+/// </summary>
 public class NVPAPICaller
 {
+    #region constants
     //Flag that determines the PayPal environment (live or sandbox)
     private const bool bSandbox = true;
     private const string CVV2 = "CVV2";
@@ -43,6 +51,8 @@ public class NVPAPICaller
     //HttpWebRequest Timeout specified in milliseconds 
     private const int Timeout = 15000;
     private static readonly string[] SECURED_NVPS = new string[] { ACCT, CVV2, SIGNATURE, PWD };
+    #endregion constants
+
 
     public void SetCredentials(string Userid, string Pwd, string Signature)
     {
@@ -62,15 +72,17 @@ public class NVPAPICaller
         string returnURL = $"{baseUri}Checkout/CheckoutReview.aspx";
         string cancelURL = $"{baseUri}Checkout/CheckoutCancel.aspx";
 
-        NVPCodec encoder = new NVPCodec();
-        encoder["METHOD"] = "SetExpressCheckout";
-        encoder["RETURNURL"] = returnURL;
-        encoder["CANCELURL"] = cancelURL;
-        encoder["BRANDNAME"] = "Wingtip Toys Sample Application";
-        encoder["PAYMENTREQUEST_0_AMT"] = amt;
-        encoder["PAYMENTREQUEST_0_ITEMAMT"] = amt;
-        encoder["PAYMENTREQUEST_0_PAYMENTACTION"] = "Sale";
-        encoder["PAYMENTREQUEST_0_CURRENCYCODE"] = "PLN";
+        NVPCodec encoder = new NVPCodec
+        {
+            ["METHOD"] = "SetExpressCheckout",
+            ["RETURNURL"] = returnURL,
+            ["CANCELURL"] = cancelURL,
+            ["BRANDNAME"] = "Wingtip Toys Sample Application",
+            ["PAYMENTREQUEST_0_AMT"] = String.Format("{0:c}", amt.Replace(',', '.')), //HOTFIX
+            ["PAYMENTREQUEST_0_ITEMAMT"] = String.Format("{0:c}", amt.Replace(',', '.')), //HOTFIX
+            ["PAYMENTREQUEST_0_PAYMENTACTION"] = "Sale",
+            ["PAYMENTREQUEST_0_CURRENCYCODE"] = "PLN"
+        };
 
         // Get the Shopping Cart Products
         using (WingtipToys.Logic.ShoppingCartActions myCartOrders = new WingtipToys.Logic.ShoppingCartActions())
@@ -80,7 +92,7 @@ public class NVPAPICaller
             for (int i = 0; i < myOrderList.Count; i++)
             {
                 encoder["L_PAYMENTREQUEST_0_NAME" + i] = myOrderList[i].Product.ProductName.ToString();
-                encoder["L_PAYMENTREQUEST_0_AMT" + i] = myOrderList[i].Product.UnitPrice.ToString();
+                encoder["L_PAYMENTREQUEST_0_AMT" + i] = String.Format("{0:c}", myOrderList[i].Product.UnitPrice.ToString().Replace(',', '.')); //HOTFIX
                 encoder["L_PAYMENTREQUEST_0_QTY" + i] = myOrderList[i].Quantity.ToString();
             }
         }
@@ -152,7 +164,7 @@ public class NVPAPICaller
         encoder["METHOD"] = "DoExpressCheckoutPayment";
         encoder["TOKEN"] = token;
         encoder["PAYERID"] = PayerID;
-        encoder["PAYMENTREQUEST_0_AMT"] = finalPaymentAmount;
+        encoder["PAYMENTREQUEST_0_AMT"] = String.Format("{0:c}", finalPaymentAmount);
         encoder["PAYMENTREQUEST_0_CURRENCYCODE"] = "PLN";
         encoder["PAYMENTREQUEST_0_PAYMENTACTION"] = "Sale";
 

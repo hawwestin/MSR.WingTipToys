@@ -476,7 +476,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logic\PayPalBySdk.cs" />
+    <Compile Include="Logic\PayPalConfiguration.cs" />
     <Compile Include="Logic\PayPalFunctions.cs" />
+    <Compile Include="Logic\USNumberFormat.cs" />
+    <Compile Include="Logic\PLNNumberFormat.cs" />
     <Compile Include="Logic\ShoppingCartActions.cs" />
     <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\Category.cs" />

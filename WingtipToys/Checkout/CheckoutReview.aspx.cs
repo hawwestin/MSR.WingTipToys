@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WingtipToys.Logic;
 using WingtipToys.Models;
 
 namespace WingtipToys.Checkout
@@ -27,6 +29,7 @@ namespace WingtipToys.Checkout
                 {
                     Session["payerId"] = PayerID;
 
+
                     var myOrder = new Order();
                     myOrder.OrderDate = Convert.ToDateTime(decoder["TIMESTAMP"].ToString());
                     myOrder.Username = User.Identity.Name;
@@ -34,17 +37,17 @@ namespace WingtipToys.Checkout
                     myOrder.LastName = decoder["LASTNAME"].ToString();
                     myOrder.Address = decoder["SHIPTOSTREET"].ToString();
                     myOrder.City = decoder["SHIPTOCITY"].ToString();
-                    myOrder.State = decoder["SHIPTOSTATE"].ToString();
-                    myOrder.PostalCode = decoder["SHIPTOZIP"].ToString();
-                    myOrder.Country = decoder["SHIPTOCOUNTRYCODE"].ToString();
-                    myOrder.Email = decoder["EMAIL"].ToString();
-                    myOrder.Total = Convert.ToDecimal(decoder["AMT"].ToString());
+                    myOrder.State = decoder.Get("SHIPTOSTATE") ?? "";
+                    myOrder.PostalCode = decoder["SHIPTOZIP"].ToString() ?? "";
+                    myOrder.Country = decoder["SHIPTOCOUNTRYCODE"].ToString() ?? "";
+                    myOrder.Email = decoder["EMAIL"].ToString();                    
+                    myOrder.Total = decimal.Parse(decoder.Get("AMT"), NumberStyles.Currency, PLNNumberFormat.GetPLNNumberFormat);
 
                     // Verify total payment amount as set on CheckoutStart.aspx.
                     try
                     {
-                        decimal paymentAmountOnCheckout = Convert.ToDecimal(Session["payment_amt"].ToString());
-                        decimal paymentAmoutFromPayPal = Convert.ToDecimal(decoder["AMT"].ToString());
+                        decimal paymentAmountOnCheckout = decimal.Parse(Session["payment_amt"].ToString(),NumberStyles.Currency, PLNNumberFormat.GetPLNNumberFormat);
+                        decimal paymentAmoutFromPayPal = decimal.Parse(decoder.Get("AMT"), NumberStyles.Currency, PLNNumberFormat.GetPLNNumberFormat);
                         if (paymentAmountOnCheckout != paymentAmoutFromPayPal)
                         {
                             Response.Redirect("CheckoutError.aspx?" + "Desc=Amount%20total%20mismatch.");

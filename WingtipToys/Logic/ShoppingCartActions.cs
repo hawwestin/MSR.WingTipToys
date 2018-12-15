@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using WingtipToys.Models;
@@ -41,6 +42,15 @@ namespace WingtipToys.Logic
             _db.SaveChanges();
         }
 
+        /// <summary>
+        /// The GetCartId method returns the cart ID for the user. The cart ID is used to track 
+        /// the items that a user has in their shopping cart. 
+        /// If the user does not have an existing cart ID, a new cart ID is created for them. 
+        /// If the user is signed in as a registered user, the cart ID is set to their user name. 
+        /// However, if the user is not signed in, the cart ID is set to a unique value (a GUID). 
+        /// A GUID ensures that only one cart is created for each user, based on session.
+        /// </summary>
+        /// <returns>cart ID for the user</returns>
         public string GetCartId()
         {
             if (HttpContext.Current.Session[CartSessionKey] == null)
@@ -73,6 +83,12 @@ namespace WingtipToys.Logic
             return _db.ShoppingCartItems.Where(c => c.CartId == ShoppingCartId).ToList();
         }
 
+        /// <summary>
+        ///  Multiply product price by quantity of that product to get        
+        /// the current price for each of those products in the cart.  
+        /// Sum all product price totals to get the cart total.  
+        /// </summary>
+        /// <returns>payment amount</returns>
         public decimal GetTotal()
         {
             ShoppingCartId = GetCartId();
@@ -82,8 +98,9 @@ namespace WingtipToys.Logic
             decimal? total = decimal.Zero;
             total = (decimal?)(from cartItems in _db.ShoppingCartItems
                                where cartItems.CartId == ShoppingCartId
-                               select (int?)cartItems.Quantity *
+                               select (double?)cartItems.Quantity *
                                cartItems.Product.UnitPrice).Sum();
+
             return total ?? decimal.Zero;
         }
 
@@ -206,7 +223,7 @@ namespace WingtipToys.Logic
         public void MigrateCart(string cartId, string userName)
         {
             var shoppingCart = _db.ShoppingCartItems.Where(c => c.CartId == cartId);
-            foreach(CartItem item in shoppingCart)
+            foreach (CartItem item in shoppingCart)
             {
                 item.CartId = userName;
             }
