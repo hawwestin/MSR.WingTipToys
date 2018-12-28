@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using WingtipToys.Models;
 using System.Web.ModelBinding;
+using System.Web.Routing;
 
 namespace WingtipToys
 {
@@ -16,13 +17,18 @@ namespace WingtipToys
 
         }
 
-        public IQueryable<Product> GetProduct([QueryString("productId")] int? productId)
+        public IQueryable<Product> GetProduct([QueryString("productId")] int? productId,
+            [RouteData] string productName)
         {
             var db = new ProductContext();
             IQueryable<Product> query = db.Products;
             if (productId.HasValue && productId > 0)
             {
                 query = query.Where(p => p.ProductID == productId);
+            }
+            else if (!string.IsNullOrEmpty(productName))
+            {
+                query = query.Where(p => string.Compare(p.ProductName, productName) == 0);
             }
             else
             {

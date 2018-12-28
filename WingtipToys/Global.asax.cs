@@ -30,6 +30,8 @@ namespace WingtipToys
             RoleActions roleActions = new RoleActions();
             roleActions.AddUserAndRole();
 
+            // Add Routes.
+            RouteActions.RegisterCustomRoutes(RouteTable.Routes);
         }
     }
 }

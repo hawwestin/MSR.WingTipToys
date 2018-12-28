@@ -490,6 +490,7 @@
     <Compile Include="Logic\PayPalConfiguration.cs" />
     <Compile Include="Logic\PayPalFunctions.cs" />
     <Compile Include="Logic\RoleActions.cs" />
+    <Compile Include="Logic\RouteActions.cs" />
     <Compile Include="Logic\USNumberFormat.cs" />
     <Compile Include="Logic\PLNNumberFormat.cs" />
     <Compile Include="Logic\ShoppingCartActions.cs" />
