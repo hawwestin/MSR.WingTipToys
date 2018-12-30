@@ -12,9 +12,9 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AdventureBikeShop</RootNamespace>
-    <AssemblyName>AdventureBikeShop</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>zadanie3</RootNamespace>
+    <AssemblyName>zadanie3</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -24,7 +24,6 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,21 +44,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Data.Linq">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -91,7 +83,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -114,36 +105,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AdventureWorksModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AdventureWorksModel.edmx</DependentUpon>
-      <LastGenOutput>AdventureWorksModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="AdventureWorksModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AdventureWorksModel.edmx</DependentUpon>
-      <LastGenOutput>AdventureWorksModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="App_Data\AdventureWorksLT_Data.mdf" />
-    <Content Include="App_Data\AdventureWorksLT_Data_log.ldf">
-      <DependentUpon>AdventureWorksLT_Data.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Themes\CzerwonaSkorka\Style.css" />
-    <Content Include="App_Themes\NiebieskaSkorka\Style.css" />
-    <Content Include="Kontrolki\Szukaj.ascx" />
-    <Content Include="Sites\About.aspx" />
+    <Content Include="About.aspx" />
     <Content Include="Adv\adv.xml" />
     <Content Include="Adv\Adv1.png" />
     <Content Include="Adv\Adv2.png" />
-    <Content Include="Sites\Ankieta.aspx" />
-    <Content Include="Sites\Contact.aspx" />
+    <Content Include="Ankieta.aspx" />
+    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\Style.css" />
-    <Content Include="DefaultASP.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -156,19 +128,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="App_Themes\NiebieskaSkorka\NiebieskaSkorka.skin" />
-    <Content Include="App_Themes\CzerwonaSkorka\CzerwonaSkorka.skin" />
-    <EntityDeploy Include="AdventureWorksModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AdventureWorksModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="AdventureWorksModel.edmx.diagram">
-      <DependentUpon>AdventureWorksModel.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Images\AWlogo.jpg" />
-    <Content Include="Sites\Informacje.aspx" />
-    <Content Include="Sites\Produkty.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -198,105 +158,34 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="Sites\Szukaj.aspx" />
-    <Content Include="Sites\Uwagi.aspx" />
-    <Content Include="Sites\WynikiWyszukiwania.aspx" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
-    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs">
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdventureWorksModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorksModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdventureWorksModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdventureWorksModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorksModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="BuildVersion.cs">
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Customer.cs">
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CustomerAddress.cs">
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ErrorLog.cs">
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Kontrolki\Szukaj.ascx.cs">
-      <DependentUpon>Szukaj.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Kontrolki\Szukaj.ascx.designer.cs">
-      <DependentUpon>Szukaj.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Product.cs">
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProductCategory.cs">
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProductDescription.cs">
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProductModel.cs">
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProductModelProductDescription.cs">
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SalesOrderDetail.cs">
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SalesOrderHeader.cs">
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Sites\Ankieta.aspx.cs">
+    <Compile Include="Ankieta.aspx.cs">
       <DependentUpon>Ankieta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Sites\Ankieta.aspx.designer.cs">
+    <Compile Include="Ankieta.aspx.designer.cs">
       <DependentUpon>Ankieta.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Sites\About.aspx.cs">
+    <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Sites\About.aspx.designer.cs">
+    <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Sites\Contact.aspx.cs">
+    <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Sites\Contact.aspx.designer.cs">
+    <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DefaultASP.aspx.cs">
-      <DependentUpon>DefaultASP.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DefaultASP.aspx.designer.cs">
-      <DependentUpon>DefaultASP.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -307,20 +196,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Sites\Informacje.aspx.cs">
-      <DependentUpon>Informacje.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Sites\Informacje.aspx.designer.cs">
-      <DependentUpon>Informacje.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Sites\Produkty.aspx.cs">
-      <DependentUpon>Produkty.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Sites\Produkty.aspx.designer.cs">
-      <DependentUpon>Produkty.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -337,43 +212,6 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="Sites\WynikiWyszukiwania.aspx.cs">
-      <DependentUpon>WynikiWyszukiwania.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Sites\WynikiWyszukiwania.aspx.designer.cs">
-      <DependentUpon>WynikiWyszukiwania.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SzablonStrony.Master.cs">
-      <DependentUpon>SzablonStrony.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SzablonStrony.Master.designer.cs">
-      <DependentUpon>SzablonStrony.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Sites\Szukaj.aspx.cs">
-      <DependentUpon>Szukaj.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Sites\Szukaj.aspx.designer.cs">
-      <DependentUpon>Szukaj.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Sites\Uwagi.aspx.cs">
-      <DependentUpon>Uwagi.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Sites\Uwagi.aspx.designer.cs">
-      <DependentUpon>Uwagi.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ufnGetAllCategories_Result.cs">
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ufnGetCustomerInformation_Result.cs">
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="vGetAllCategories.cs">
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -381,31 +219,20 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="vProductAndDescription.cs">
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="vProductModelCatalogDescription.cs">
-      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
-    <Content Include="SzablonStrony.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
