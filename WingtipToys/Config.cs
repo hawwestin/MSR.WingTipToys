@@ -4,7 +4,7 @@ namespace WingtipToys
 {
     public static class Config
     {
-        public static string ClientId => ConfigurationManager.AppSettings["ClientId"];
-        public static string ClientSecret => ConfigurationManager.AppSettings["ClientSecret"];
+        public static string GoogleClientId => ConfigurationManager.AppSettings["GoogleClientId"];
+        public static string GoogleClientSecret => ConfigurationManager.AppSettings["GoogleClientSecret"];
     }
 }
